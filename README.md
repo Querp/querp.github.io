@@ -1,1 +1,0 @@
-# querp.github.io
