@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notulen</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-align: center;
+  }
+  .meeting {
+    margin-bottom: 30px;
+  }
+  .back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Notulen</h1>
+
+<ul>
+  <li><a href="#meeting_1">26-02-2024</a></li>
+  <li><a href="#meeting_1">23-02-2024</a></li>
+  <li><a href="#meeting_1">22-02-2024</a></li>
+  <li><a href="#meeting_1">21-02-2024</a></li>
+  <li><a href="#meeting_1">20-02-2024</a></li>
+  
+</ul>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="meeting" id="meeting_1">
+  <h2>Meeting Notes - 2024-02-27</h2>
+  <p>Attendees: Aryan, Loreen, Wessel</p>
+  <p>Important Points:</p>
+  <ul>
+    <li>Discussed project timeline.</li>
+    <li>Reviewed budget allocation.</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="meeting" id="meeting_2">
+  <h2>Meeting Notes - 2024-02-28</h2>
+  <p>Attendees: Daniel, Rokan, Loreen</p>
+  <p>Important Points:</p>
+  <ul>
+    <li>Presented marketing strategy.</li>
+    <li>Discussed client feedback.</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="meeting" id="meeting_3">
+  <h2>Meeting Notes - 2024-02-29</h2>
+  <p>Attendees: Wessel, Rokan, Daniel</p>
+  <p>Important Points:</p>
+  <ul>
+    <li>Finalized project milestones.</li>
+    <li>Assigned tasks for next sprint.</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="meeting" id="meeting_4">
+  <h2>Meeting Notes - 2024-03-01</h2>
+  <p>Attendees: Loreen, Aryan, Daniel</p>
+  <p>Important Points:</p>
+  <ul>
+    <li>Reviewed progress on action items.</li>
+    <li>Discussed upcoming deadlines.</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<div class="meeting" id="meeting_5">
+  <h2>Meeting Notes - 2024-03-02</h2>
+  <p>Attendees: Rokan, Aryan, Wessel</p>
+  <p>Important Points:</p>
+  <ul>
+    <li>Brainstormed ideas for new project.</li>
+    <li>Outlined project requirements.</li>
+  </ul>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<button class="back-to-top" onclick="scrollToTop()">Back to Top</button>
+
+<script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.addEventListener('scroll', function() {
+    var backToTopButton = document.querySelector('.back-to-top');
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
