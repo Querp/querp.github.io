@@ -1,0 +1,16 @@
+
+.highlight {
+    background-color: #504e1c; /* Light yellow background for highlighting */
+  }
+
+  body {
+    background-color: #0a060f;
+    color: whitesmoke;
+    font-family: sans-serif;
+    
+  }
+  h1 {
+    font-size: 48px;
+    text-align: center;`
+    margin: 10px;
+  }
