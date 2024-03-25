@@ -1,16 +1,60 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
+=======
+<!--  
+Doel: Be a Multitool for beginning web developers
+To do:
+- button om beschrijving the minimaliseren/maximaliseren
+- maak lijst met bronnen
+- voeg (info) button toe, laat lange beschrijving (op nieuwe pagina?) zien bij klikken
+    - laat korte beschrijving zien bij mouse-over
+    - laat lange beschrijving zien bij klikken (info)
+        - lange beschrijving, url, 
+    - Laad pagina zien bij klikken (naam)
+- laat gebruiker lange beschrijving sluiten
+- organiseer CSS
+- Integreer logo beter
+- filteropties voor gebruiker:
+    -programmeertaal
+    -thema
+- back to top button
+- rooster en notulen beveiligen (simpel = beter)
+    - link naar bestand in Teams?
+    - alleen toegang van ip werk?
+    - log-in
+- bug! de boxen van bronnen zonder tags zijn kleiner
+- waardeer de bronnen (0=niet bruikbaar, 100=kan niet zonder)
+- sorteer bronnen op waarde 
+- recent bezochte links in een 'thema-box' weergeven, 
+    of als 'quick links' met absolute positie dat niet scrollt
+- -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html lang="en">
+
+>>>>>>> 8f782be8d23e6e042da5e6aca4a9ce34cdd14e90
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+<<<<<<< HEAD
     <title>Document</title>
+=======
+    <link rel="icon" href="img/icon1.png">
+    <title>Kampvuur</title>
+>>>>>>> 8f782be8d23e6e042da5e6aca4a9ce34cdd14e90
 </head>
 
 <body>
     <div class="button-container">
         <nav class="nav">
+<<<<<<< HEAD
             <a href="">Bronnen</a>
             <a href="">Notulen</a>
             <a href="">Rooster</a>
@@ -19,4 +63,75 @@
     </div>
 </body>
 
+=======
+            <a class="logo" href="#"><img src="img/icon2.png" alt=""></a>
+            <a class="button-active" href="">Bronnen</a>
+            <a href="">Key Shortcuts</a>
+            <a href="">Notulen</a>
+            <a href="">Rooster</a>
+            <a href="">Project</a>
+            <a class="logo"><img class="logo-text" src="img/icon-text.png" alt=""></a>
+        </nav>
+    </div>
+
+    <div class="description-box" id="description-container">
+        <div class="description-center">
+            <div class="description-title">
+                <p id="description-name"><!-- use JS to load Title --></p>
+                <p id="description-link" class="html"><!-- use JS to load Url --></p>
+            </div>
+            <p id="description"><!-- use JS to load Description --></p>
+        </div>
+    </div>
+
+    <main class="links">
+        <div>
+            <h2>Leer</h2>
+            <a id="bron17" href="https://www.freecodecamp.org/">Free Code Camp</a>  
+            <a id="bron18" href="https://www.w3schools.com/">W3schools</a>
+            <a id="bron19" href="https://www.youtube.com/watch?v=BI1o2H9z9fo">JS Tutorial (Traversy Media)<span class="tag js">JS</span></a>
+            <a id="bron20" href="https://www.youtube.com/watch?v=mJgBOIoGihA&t=12457s/ ">HTML Tutorial (Dave Gray)<span class="tag html">HTML</span></a>
+            <a id="bron21" href="https://www.youtube.com/watch?v=n4R2E7O-Ngo&t=10665s">CSS Tutorial (Dave Gray)<span class="tag css">CSS</span></a>
+            <a id="bron22" href="https://cssgridgarden.com/#nl">Grid Garden<span class="tag css">CSS</span></a>
+            <a id="bron23" href="https://flexboxfroggy.com/#nl">Flexbox Froggy<span class="tag css">CSS</span></a>
+        </div>
+        <div>
+            <h2>Webapplicaties</h2>
+            <a id="bron0" href="https://chat.openai.com/">ChatGPT<span class="tag ai">AI</span></a>
+            <a id="bron1" href="https://validator.w3.org//">W3C HTML Validator<span class="tag html">HTML</span></a>
+            <a id="bron2" href="https://jigsaw.w3.org/css-validator/">W3C CSS Validator<span class="tag css">CSS</span></a>
+            <a id="bron3" href="https://specificity.keegan.st/">Specificity Calculator<span class="tag css">CSS</span></a>
+            <a id="bron4" href="https://app.diagrams.net/">Flowchart Maker<span class="tag other">UML</span></a>
+            <a id="bron5" href="https://playgroundai.com/">Playground AI<span class="tag ai">AI</span><span
+                    class="tag other">IMG</span></a>
+            <a id="bron6" href="https://codepen.io/">CodePen<span class="tag html">HTML</span><span
+                    class="tag css">CSS</span><span class="tag js">JS</span></a>
+            <a id="bron7" href="https://editor.p5js.org/">P5.js Web Editor<span class="tag js">JS</span></a>
+            <a id="bron8" href="https://fonts.google.com/">Google Fonts<span class="tag other">Fonts</span></a>
+            <a id="bron9" href="https://fontflipper.com/upload">Font Flipper<span class="tag css">CSS</span><span
+                    class="tag other">Fonts</span></a>
+        </div>
+        <div>
+            <h2>Informatie</h2>
+            <a id="bron10" href="https://www.w3schools.com/html/html_examples.asp">W3 HTML Examples<span class="tag html">HTML</span></a>
+            <a id="bron11" href="https://www.w3.org/TR/WCAG22/">WCAG</a>
+            <a id="bron12" href="https://yoksel.github.io/flex-cheatsheet/">CSS Flex Samenvatting<span class="tag css">CSS</span></a>
+            <a id="bron13" href="https://www.nuggetofjoy.com/wp-content/uploads/css-flexbox-poster-1365x2048.png">CSS Flex-Cheatsheet<span
+                    class="tag css">CSS</span><span class="tag other">.png</span></a>            
+        </div>
+        <div>
+            <h2>Download</h2>
+            <a id="bron14" href="https://libgen.is/">Library Genesis<span class="tag other">Boeken</span></a>
+            <a id="bron15" href="https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc">VisBug<span
+                class="tag html">HTML<span
+                    class="tag css">CSS</span><span class="tag other">Chrome Plugin</span></a>
+            <a id="bron16" href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server voor VS Code</a>
+        </div>
+        
+        <script src="main.js"></script>
+    </main>
+</body>
+
+
+>>>>>>> 8f782be8d23e6e042da5e6aca4a9ce34cdd14e90
 </html>
