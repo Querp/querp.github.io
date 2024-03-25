@@ -1,0 +1,57 @@
+WEBAPP
+
+Specificity Calculator
+https://specificity.keegan.st/
+A visual way to understand CSS specificity. Change the selectors or paste in your own.
+
+CSS Validator
+https://jigsaw.w3.org/css-validator/
+Controleer Cascading Style Sheets (CSS) en (X)HTML documenten die gebruik maken van style sheets
+ 
+Flowchart maker (UML)
+https://app.diagrams.net/   / draw.io
+
+Compare Fonts
+https://fontflipper.com/upload
+
+INFO
+
+Examples
+https://www.w3schools.com/html/html_examples.asp
+
+Web Content Accessibility Guidelines
+https://www.w3.org/TR/WCAG22/
+Web Content Accessibility Guidelines (WCAG) 2.2 covers a wide range of recommendations for making Web content more accessible.
+
+Flex-Cheatsheet
+https://yoksel.github.io/flex-cheatsheet/
+Een beknopt overzicht met alle flex container functionaliteiten.
+ 
+
+DOWNLOAD
+
+Download boeken
+https://libgen.is/
+Libgen.is is een website die een uitgebreide collectie gratis boeken, artikelen en andere academische bronnen host. Het richt zich voornamelijk op het verstrekken van toegang tot wetenschappelijke artikelen, studieboeken en andere educatieve materialen.
+
+Ontwerptool chrome plugin 
+https://chromewebstore.google.com/detail/visbug/cdockenadnadldjbbgcallicgledbeoc
+Visbug stelt gebruikers in staat om op een visuele en intuïtieve manier wijzigingen aan te brengen en elementen op webpagina's te bewerken zonder dat ze de broncode hoeven te wijzigen.
+
+Live Server voor VS Code
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+Launch a local development server with live reload feature for static & dynamic pages.
+
+
+TO ADD: 
+
+Learn Visual Studio Code in 7min (Official Beginner Tutorial)
+https://youtu.be/B-s71n0dHUk
+
+CSS default browser values
+https://www.w3schools.com/cssref/css_default_values.php
+
+Dave Gray youtube tutorials
+Danny Goodman - JavaScript Bible
+QnA project bestanden
+

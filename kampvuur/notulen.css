@@ -1,0 +1,53 @@
+body {
+    font-size: 14px;
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-size: 1.4em;
+}
+
+h2 {
+    font-size: 1.1em;
+}
+
+div {
+    margin: 10px;
+    border-bottom: 1px solid gray;
+}
+
+div:last-of-type {
+    border: none;
+}
+
+nav {
+    margin: 10px;
+    border-bottom: 2px solid gray;
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    border-bottom: 3px solid gray;
+    margin: 10px 0;
+}
+
+.button {
+    position: fixed;
+    bottom: 3vw;
+    right: 4vw;
+    border: none;
+    background-color: darkgray;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 10px;
+}
+a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+a:hover {
+    color:red;
+}

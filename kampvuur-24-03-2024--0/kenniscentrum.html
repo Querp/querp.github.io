@@ -1,0 +1,264 @@
+<!-- 
+-maak de hele Q-box een button (inclusief meta[naam, tags, datum])
+-filters: laat de gebruiker alle/geen filters selecteren
+-filters: Als de gebruiker op de filter-groep-header klikt, 
+    verberg/weergeef alle filter-items in die groep.
+-filters: selecteer meerdere items door te slepen (Rimworld)
+-checkboxes: CSS
+-vraag: als de gebruiker voor het antwoord moet scrollen, 
+    weergeef de vraag (truncated en/of klein) bovenaan de pagina
+-iframe met video's uitge-comment omdat het de console onleesbaar maakt ivp meldingen(?).
+-checkbox-tags logica uitdenken.
+-maak tekst beter leesbaar
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampvuur</title>
+    <link rel="icon" type="image/x-icon" href="img/favLogo.png">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/kenniscentrum.css">
+</head>
+
+<body>
+    <header>        
+        <div class="instellingen">
+            <a href="#"><img src="img/instellingen.png" alt="Instellingen"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+        </div>       
+        <div class="banner">
+            <h1><a href="index.html">Kampvuur</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="kenniscentrum.html">Kenniscentrum</a></li>
+                <li><a href="over-ons.html">Over ons</a></li>
+            </ul>
+        </nav>
+        <div>
+            <select id="postsStyle" name="taal" onchange="setPostsStyle()">
+                <option value="nl">Nederlands</option>
+                <option value="nlMakkelijk">Nederlands - makkelijk</option>
+                <option value="eng">English</option>
+                <option value="engMakkelijk">English - easy</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- LINKER DEEL -->
+    <main>
+        <form class="box filter-wrapper">
+
+            <!-- Auteur -->
+            <div>
+                <button type="button" onclick="toggleCheckboxGroup('auteur')">Auteur</button>
+                <label for="Aryan">
+                    <div class="filter">
+                        <input type="checkbox" id="Aryan" onchange="toggleCheckbox(this)" class="filter-auteur checkbox">
+                        <p>Aryan</p>
+                    </div>
+                </label>
+                <label for="Daniel">
+                    <div class="filter">
+                        <input type="checkbox" id="Daniel" onchange="toggleCheckbox(this)" class="filter-auteur checkbox">
+                        <p>Daniel</p>
+                    </div>
+                </label>
+                <label for="Loreen">
+                    <div class="filter">
+                        <input type="checkbox" id="Loreen" onchange="toggleCheckbox(this)" class="filter-auteur checkbox">
+                        <p>Loreen</p>
+                    </div>
+                </label>
+                <label for="Rokan">
+                    <div class="filter">
+                        <input type="checkbox" id="Rokan" onchange="toggleCheckbox(this)" class="filter-auteur checkbox">
+                        <p>Rokan</p>
+                    </div>
+                </label>
+                <label for="Wessel">
+                    <div class="filter">
+                        <input type="checkbox" id="Wessel" onchange="toggleCheckbox(this)" class="filter-auteur checkbox">
+                        <p>Wessel</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Programmeertaal -->
+            <div>
+                <button type="button" onclick="toggleCheckboxGroup('programmeertaal')">Programmeertaal</button>
+                <label for="HTML">
+                    <div class="filter">
+                        <input type="checkbox" id="HTML" onchange="toggleCheckbox(this)" class="filter-programmeertaal checkbox">
+                        <p>HTML</p>
+                    </div>
+                </label>
+                <label for="CSS">
+                    <div class="filter">
+                        <input type="checkbox" id="CSS" onchange="toggleCheckbox(this)" class="filter-programmeertaal checkbox">
+                        <p>CSS</p>
+                    </div>
+                </label>
+                <label for="JavaScript">
+                    <div class="filter">
+                        <input type="checkbox" id="JavaScript" onchange="toggleCheckbox(this)" class="filter-programmeertaal checkbox">
+                        <p>JavaScript</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Categorie -->
+            <div>
+                <button type="button" onclick="toggleCheckboxGroup('categorie')">Categorie</button>
+
+                <label for="Accessibility">
+                    <div class="filter">
+                        <input type="checkbox" id="Accessibility" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Accessibility</p>
+                    </div>
+                </label>
+                <label for="Debugging">
+                    <div class="filter">
+                        <input type="checkbox" id="Debugging" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Debugging</p>
+                    </div>
+                </label>
+                <label for="Front-end-frameworks">
+                    <div class="filter">
+                        <input type="checkbox" id="Front-end-frameworks" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Front-end Frameworks</p>
+                    </div>
+                </label>
+                
+                <label for="Kantoorzaken">
+                    <div class="filter">
+                        <input type="checkbox" id="Kantoorzaken" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Kantoorzaken</p>
+                    </div>
+                </label>
+
+                <label for="Responsive-design">
+                    <div class="filter">
+                        <input type="checkbox" id="Responsive-design" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Responsive Design</p>
+                    </div>
+                </label>
+                <label for="Semantic-HTML">
+                    <div class="filter">
+                        <input type="checkbox" id="Semantic-HTML" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>Semantic HTML</p>
+                    </div>
+                </label>
+                <label for="UI">
+                    <div class="filter">
+                        <input type="checkbox" id="UI" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>User Interface (UI)</p>
+                    </div>
+                </label>
+                <label for="UX">
+                    <div class="filter">
+                        <input type="checkbox" id="UX" onchange="toggleCheckbox(this)" class="filter-categorie checkbox">
+                        <p>User Experience (UX)</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Datum -->
+            <div>
+                <button type="button" onclick="toggleCheckboxGroup('datum')">Datum</button>
+
+                <label for="03-2024">
+                    <div class="filter">
+                        <input type="checkbox" id="03-2024" onchange="toggleCheckbox(this)" class="filter-datum checkbox">
+                        <p>03-2024</p>
+                    </div>
+                </label>
+                <label for="02-2024">
+                    <div class="filter">
+                        <input type="checkbox" id="02-2024" onchange="toggleCheckbox(this)" class="filter-datum checkbox">
+                        <p>02-2024</p>
+                    </div>
+                </label>
+                <label for="01-2024">
+                    <div class="filter">
+                        <input type="checkbox" id="01-2024" onchange="toggleCheckbox(this)" class="filter-datum checkbox">
+                        <p>01-2024</p>
+                    </div>
+                </label>
+            </div>
+        </form>
+
+
+        <!-- RECHTER DEEL  -->
+        <section class="box qa-wrapper" id="kenniscentrum">
+            <!-- SORTEER -->
+            <form class="sorteer-wrapper">
+                <label for="sorteer-opties">Sorteer op</label>
+                <select name="sorteer-opties" id="sorteer-opties">
+                    <option value="">Datum (nieuw-oud)</option>
+                    <option value="">Datum (oud-nieuw)</option>
+                </select>
+            </form>
+
+            <!-- 
+            POST EXAMPLE 
+
+            <article class="box post">
+                <section>
+                    <ul>
+                        <li>Gerard</li>
+                        <li>HTML CSS</li>
+                        <li>19-03-2024</li>
+                    </ul>
+                    <button type="button" onclick="hideAnswer('answer1')">
+                        Wat is het verschil tussen &lt;div&gt; en &lt;span&gt;?
+                    </button>
+                </section>
+                <section id="answer1" class="antwoord">
+                    <p>
+                        &lt;div&gt; wordt gebruikt om blokken van inhoud te maken, zoals secties, en wordt standaard
+                        weergegeven als een blok element. <br>
+                        <img src="https://picsum.photos/id/40/1200/400">
+                        <br><br>
+                        &lt;span&gt; daarentegen is bedoeld voor het selecteren en opmaken van delen van tekst binnen
+                        andere elementen, zonder de betekenis van de tekst te veranderen, en wordt standaard weergegeven als
+                        een inline element.
+                        <br>
+                        <img
+                            src="https://media.gcflearnfree.org/content/5e82363212da9215e057b928_03_30_2020/block_vs_inline_diagram.png">
+                    </p>
+                </section>
+            </article>
+
+            
+            POSTS GENERATED WITH JS:
+            
+            <article>
+                <section>   
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <button></button>
+                </section>
+                <section>
+                    <p></p>                    
+                </section>
+            </article>
+            
+            -->
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/kenniscentrum.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+ 
+h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-top: 10px;
+}
+h2{
+    font-size: 1.7em;
+    margin-bottom: 8px;
+}
+
+div{
+    border:1px rgb(73, 73, 73) solid;
+    border-radius: 10px;
+    margin: 0px 10px 18px 10px;
+    padding: 10px 20px;
+}
+
+a {
+    margin-bottom: 3px;
+    padding: 10px;
+}
+
+
+body, h1 {
+    color: whitesmoke;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: whitesmoke;
+
+}
+
+a:hover {
+
+    text-decoration: underline;
+}

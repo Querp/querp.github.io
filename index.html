@@ -4,26 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectgroep Home Page</title>
-    <link rel="stylesheet" href="homepage.css">
-    
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
 
 <body>
     <div class="button-container">
-        <button onclick="loadPage('bronnen.html')">Bronnen</button>
-        <button onclick="loadPage('notulen.html')">Notulen</button>
-        <button onclick="loadPage('rooster.html')">Rooster</button>
+        <nav class="nav">
+            <a href="">Bronnen</a>
+            <a href="">Notulen</a>
+            <a href="">Rooster</a>
+            <a href="">Project</a>
+        </nav>
     </div>
-
-    <iframe src="" frameborder="2" id="contentFrame"></iframe>
-
-    <script>
-        function loadPage(pageURL) {
-          document.getElementById('contentFrame').src = pageURL;
-        }
-
-    </script>
 </body>
 
 </html>

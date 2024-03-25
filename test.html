@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Hover ID Checker</title>  
+</head>
+
+<body>
+
+    <ul class="links">
+        <li><a href="#" id="bron1">WCAG</a></li>
+        <li><a href="#" id="bron2">CSS Validator</a></li>
+        <li><a href="#" id="bron3">Google Fonts</a></li>
+    </ul>
+
+    <p id="container">hi</p>
+
+    <script>
+        // Wait for the DOM content to be fully loaded
+        document.addEventListener("DOMContentLoaded", function () {
+            // Select all anchor elements inside elements with class 'links'
+            const links = document.querySelectorAll('.links a');
+
+            // Iterate over each link
+            links.forEach(link => {
+                // Add event listener for mouseenter event
+                link.addEventListener('mouseenter', function () {
+                    // Get the ID of the hovered link
+                    const linkId = link.id;
+                    // Fill element with id "container" ! ADD CONTENT ! 
+                    document.getElementById("container").textContent = linkId;
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
