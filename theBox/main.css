@@ -1,0 +1,194 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    background-color: rgb(55, 98, 207);
+    color: whitesmoke;
+    flex-direction: column;
+}
+
+
+.margin-box {
+    background-color: rgb(119, 117, 141);
+    padding: 1.5em;
+    border: 2px solid rgb(255, 157, 0);
+    margin-bottom: 1rem;
+
+}
+
+.border-box {
+    background-color: rgb(39, 145, 177);
+    padding: 1.5em;
+    border: 2px solid rgb(0, 255, 106);
+
+}
+
+.padding-box {
+    background-color: rgb(125, 64, 135);
+    border: 2px red solid;
+    padding: 1.5em;
+    border-radius: 2px;
+}
+
+.content-box {
+    width: 10.3em;
+    height: 7.3em;
+    background-color: rgb(55, 98, 207);
+    background-color: rgb(19, 19, 19);
+    border: 2px solid rgba(255, 255, 255, 0.099);
+    border-radius: 3px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+}
+
+p {
+    font-size: 9.8em;
+    padding-top: 0.01em;
+    padding-left: 0.005em;
+}
+
+.content-box p {
+    color: rgb(19, 19, 19);
+    color: rgb(55, 98, 207);
+}
+
+.stats-box {
+    background-color: rgba(0, 0, 0, 0.093);
+    width: 16rem;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 0.7rem 1.4rem;
+    margin-top: auto;    
+}
+
+.stats {
+    flex-direction: column;
+}
+
+.stats p {
+    font-size: inherit;
+}
+
+.stats-color div {
+    padding: 0.5em;
+    line-height: inherit;
+    margin-bottom: 0.1rem;
+
+}
+
+.padding-color {
+    background-color: red;
+}
+
+.border-color {
+    background-color: rgb(0, 255, 106);
+}
+
+.margin-color {
+    background-color: rgb(255, 157, 0);
+}
+
+/* .slidecontainer {
+    width: 100%;
+} */
+
+.flexcol {
+    flex-direction: column;
+}
+
+.log {
+    height:3rem;
+    width: 12rem;
+    background-color: rgba(0, 0, 0, 0.185);
+    text-align: center;
+    line-height: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    /* Override default CSS styles */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16rem;
+    outline: none;
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+.sl-padding {
+    margin-top: 0.25rem;
+}
+
+.sl-padding input {
+    background: rgba(255, 0, 0, 0.82);
+}
+
+.sl-border input {
+    background: rgba(0, 255, 106, 0.823);
+}
+
+.sl-margin input {
+    background: rgba(255, 157, 0, 0.819);
+}
+
+/* slider handle */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 32px;
+    background: #ffffff;
+    cursor: pointer;
+    
+}
+
+.sl-padding:hover + .padding-box{
+    background-color: rgb(0, 255, 136);
+}
+
+#padding {
+    width: 5rem;    
+}
+
+h1 {
+    margin-bottom: auto;
+}
+
+.flexcol {
+    margin-bottom: 4.8rem;
+}

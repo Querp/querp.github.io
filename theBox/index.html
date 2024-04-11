@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="flex">
+    <h1>The Box Model</h1>
+
+    <!-- 'box-image' -->
+    <div class="margin-box" id="margin-box">
+        <div class="border-box" id="border-box">
+            <div class="padding-box" id="padding-box">
+                <div class="content-box flex">
+                    <p>50</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- image's stats -->
+    <div class="flex stats-box">
+        <div class="stats-color">
+            <div class="padding-color"></div>
+            <div class="border-color"></div>
+            <div class="margin-color"></div>
+        </div>
+        <div class="stats">
+            <p>padding</p>
+            <p>border</p>
+            <p>margin</p>
+        </div>
+        <div>
+            <div id="padding">1.00 rem</div>
+            <div id="border">1.00 rem</div>
+            <div id="margin">1.00 rem</div>
+        </div>
+    </div>
+
+    <!-- sliders -->
+    <div class="flex flexcol">
+        <div class="slidecontainer sl-padding" onmouseover="hover('padding-box')"
+            onmouseleave="stopHover('padding-box')">
+            <input type="range" min="0" max="100" value="25" class="slider" id="sl-padding">
+        </div>
+        <div class="slidecontainer sl-border" onmouseover="hover('border-box')" onmouseleave="stopHover('border-box')">
+            <input type="range" min="0" max="100" value="25" class="slider" id="sl-border">
+        </div>
+        <div class="slidecontainer sl-margin" onmouseover="hover('margin-box')" onmouseleave="stopHover('margin-box')">
+            <input type="range" min="0" max="100" value="25" class="slider" id="sl-margin">
+        </div>
+    </div>
+    <!-- <div class="log" id="log"></div> -->
+    <script src="main.js"></script>
+</body>
+
+</html>
