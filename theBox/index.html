@@ -1,3 +1,6 @@
+<!-- when hovering slider:
+only highlight corresponding sides, not the whole block -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +12,17 @@
 </head>
 
 <body class="flex">
-    <h1>The Box Model</h1>
+    <h1 id="">The <span id="maBody">Box</span> Model</h1>
 
     <!-- 'box-image' -->
     <div class="margin-box" id="margin-box">
+        <div class="overlay-box overlay-box-margin" id="ob-m">margin</div>
         <div class="border-box" id="border-box">
+            <div class="overlay-box overlay-box-border" id="ob-b">border</div>
             <div class="padding-box" id="padding-box">
+                <div class="overlay-box overlay-box-padding" id="ob-p">padding</div>
                 <div class="content-box flex">
-                    <p>50</p>
+                    <div class="overlay-box overlay-box-content" id="ob-m">content</div>
                 </div>
             </div>
         </div>
@@ -39,10 +45,38 @@
             <div id="border">1.00 rem</div>
             <div id="margin">1.00 rem</div>
         </div>
+        <div>
+            <div id="paddingPx">16 px</div>
+            <div id="borderPx">16 px</div>
+            <div id="marginPx">16 px</div>
+        </div>
+    </div>
+
+    <!-- checkboxes -->
+    <div class="checkboxes flex flexcol">
+        <label class="checkbox" for="top">
+            <input type="checkbox" id="top" name="df" value="padding-top" onclick="setSliderType(this)" checked>
+            Top
+        </label>
+        <div class="flex">
+            <label class="checkbox" for="left">
+                <input type="checkbox" id="left" name="" value="padding-left" onclick="setSliderType(this)" checked>
+                Left
+            </label>
+            <label class="checkbox" for="right">
+                <input type="checkbox" id="right" name="" value="padding-right" onclick="setSliderType(this)" checked>
+                Right
+            </label>
+        </div>
+        <label class="checkbox" for="bottom">
+            <input type="checkbox" id="bottom" name="" value="padding-bottom" onclick="setSliderType(this)" checked>
+            Bottom
+        </label>
+
     </div>
 
     <!-- sliders -->
-    <div class="flex flexcol">
+    <div class="flex flexcol slider-box">
         <div class="slidecontainer sl-padding" onmouseover="hover('padding-box')"
             onmouseleave="stopHover('padding-box')">
             <input type="range" min="0" max="100" value="25" class="slider" id="sl-padding">
@@ -54,6 +88,7 @@
             <input type="range" min="0" max="100" value="25" class="slider" id="sl-margin">
         </div>
     </div>
+
     <!-- <div class="log" id="log"></div> -->
     <script src="main.js"></script>
 </body>

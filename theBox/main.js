@@ -1,3 +1,17 @@
+let timer = 223;
+let topCB = true;
+let rightCB = true;
+let bottomCB = true;
+let leftCB = true;
+
+setInterval(function () {
+    let element = document.getElementById('maBody');
+    timer += -1;
+    element.style.backgroundColor = `hsl(${timer % 360}, 61%, 51%)`;
+}, 25);
+
+
+
 function hover(target) {
     const box = document.getElementById(target);
     const paddingSlider = document.getElementById('sl-padding');
@@ -6,6 +20,9 @@ function hover(target) {
     const elementPaddingStat = document.getElementById('padding');
     const elementBorderStat = document.getElementById('border');
     const elementMarginStat = document.getElementById('margin');
+    const elementPaddingStatPx = document.getElementById('paddingPx');
+    const elementBorderStatPx = document.getElementById('borderPx');
+    const elementMarginStatPx = document.getElementById('marginPx');
 
     // set color
     if (target === "padding-box") {
@@ -16,12 +33,14 @@ function hover(target) {
         box.style.backgroundColor = 'rgb(255, 157, 0)';
     }
 
-    // set stat and padding
+    // set stat, padding and border
     if (target === "padding-box") {
         paddingSlider.addEventListener('input', function () {
             const newValue = this.value;
             elementPaddingStat.innerHTML = `${newValue / 25} rem`;
-            box.style.padding = newValue / 25 + "rem";
+            elementPaddingStatPx.innerHTML = `${Math.round(newValue / 25 * 16)} px`;
+            setPadding(box, newValue);
+
             if (newValue === '0') {
                 box.style.borderWidth = "0px";
             } else {
@@ -33,7 +52,8 @@ function hover(target) {
         borderSlider.addEventListener('input', function () {
             const newValue = this.value;
             elementBorderStat.innerHTML = `${newValue / 25} rem`;
-            box.style.padding = newValue / 25 + "rem";
+            elementBorderStatPx.innerHTML = `${Math.round(newValue / 25 * 16)} px`;
+            setPadding(box, newValue);
             if (newValue === '0') {
                 box.style.borderWidth = "0px";
             } else {
@@ -45,7 +65,8 @@ function hover(target) {
         marginSlider.addEventListener('input', function () {
             const newValue = this.value;
             elementMarginStat.innerHTML = `${newValue / 25} rem`;
-            box.style.padding = newValue / 25 + "rem";
+            elementMarginStatPx.innerHTML = `${Math.round(newValue / 25 * 16)} px`;
+            setPadding(box, newValue);
             if (newValue === '0') {
                 box.style.borderWidth = "0px";
             } else {
@@ -58,16 +79,47 @@ function hover(target) {
 function stopHover(target) {
     const box = document.getElementById(target);
     if (target === "padding-box") {
-        box.style.backgroundColor = 'rgb(125, 64, 135)';
+        box.style.backgroundColor = 'rgb(168, 38, 80)';
     } else if (target === "border-box") {
-        box.style.backgroundColor = 'rgb(39, 145, 177)';
+        box.style.backgroundColor = 'rgb(21, 185, 141)';
     } else {
-        box.style.backgroundColor = 'rgb(119, 117, 141)';
+        box.style.backgroundColor = 'rgb(168, 129, 80)';
     }
 
 }
 
+function setSliderType(element) {
+    console.log(element.checked);
+    console.log(element.value);
+    if (element.value === "padding-top") {
+        topCB = element.checked;
+        // console.log("top " + element.checked);
+    } else if (element.value === "padding-right") {
+        rightCB = element.checked;
+    } else if (element.value === "padding-bottom") {
+        bottomCB = element.checked;
+    } else if (element.value === "padding-left") {
+        leftCB = element.checked;
+    }
+}
 
+
+
+function setPadding(box, newValue) {
+
+    if (topCB) {
+        box.style.paddingTop = newValue / 25 + "rem";
+    }
+    if (rightCB) {
+        box.style.paddingRight = newValue / 25 + "rem";
+    }
+    if (bottomCB) {
+        box.style.paddingBottom = newValue / 25 + "rem";
+    }
+    if (leftCB) {
+        box.style.paddingLeft = newValue / 25 + "rem";
+    }
+}
 
 
 

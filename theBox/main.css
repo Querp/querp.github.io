@@ -1,3 +1,13 @@
+.comment {
+    background-color: red;
+    background-color: rgb(0, 255, 106);
+    background-color: rgb(255, 157, 0);
+
+    background-color: rgb(168, 38, 80);
+    background-color: rgb(21, 185, 141);
+    background-color: rgb(168, 129, 80);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -18,40 +28,78 @@ body {
     background-color: rgb(55, 98, 207);
     color: whitesmoke;
     flex-direction: column;
+    user-select: none;
 }
 
 
 .margin-box {
+    position: relative;
     background-color: rgb(119, 117, 141);
+    background-color: rgb(168, 129, 80);
     padding: 1.5em;
-    border: 2px solid rgb(255, 157, 0);
+    /* border: 2px solid rgba(255, 157, 0, 0.4); */
     margin-bottom: 1rem;
 
 }
 
 .border-box {
+    position: relative;
     background-color: rgb(39, 145, 177);
+    background-color: rgb(21, 185, 141);
     padding: 1.5em;
-    border: 2px solid rgb(0, 255, 106);
+    /* border: 2px solid rgba(0, 255, 106, 0.3); */
 
 }
 
 .padding-box {
-    background-color: rgb(125, 64, 135);
-    border: 2px red solid;
+    position: relative;
+    /* background-color: rgb(125, 64, 135); */
+    background-color: rgb(168, 38, 80);
+    /* border: 3px rgba(255, 0, 0, 0.3) solid; */
     padding: 1.5em;
-    border-radius: 2px;
+
 }
 
 .content-box {
-    width: 10.3em;
-    height: 7.3em;
+    position: relative;
+    width: 10.3rem;
+    height: 7.3rem;
     background-color: rgb(55, 98, 207);
+    /* background-color: hsl(223, 61%, 51%); */
     background-color: rgb(19, 19, 19);
-    border: 2px solid rgba(255, 255, 255, 0.099);
-    border-radius: 3px;
+    /* border: 2px solid rgba(255, 255, 255, 0.099); */
     box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
 }
+
+.overlay-box {
+    position: absolute;
+    width: 10.3em;
+    height: 1.6em;
+    /* border: 1px solid #73AD21; */
+    text-align: center;
+    opacity: 75%;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.698);
+}
+
+
+
+.overlay-box-padding {
+    top: 0.0rem;
+}
+
+.overlay-box-border {
+    top: 0rem;
+}
+
+.overlay-box-margin {
+    top: 0rem;
+}
+
+.overlay-box-content {
+    top: 0rem;
+    line-height: 6.8rem;
+}
+
 
 p {
     font-size: 9.8em;
@@ -61,16 +109,25 @@ p {
 
 .content-box p {
     color: rgb(19, 19, 19);
-    color: rgb(55, 98, 207);
+    /* color: rgb(55, 98, 207); */
 }
 
 .stats-box {
     background-color: rgba(0, 0, 0, 0.093);
-    width: 16rem;
+    width: 22rem;
     justify-content: space-between;
-    font-size: 1.2rem;
-    padding: 0.7rem 1.4rem;
-    margin-top: auto;    
+    padding: 0.6rem 1.4rem;
+    margin-top: auto;
+    display: none;
+}
+
+.slider-box {
+    width: 22rem;;
+    background-color: rgba(0, 0, 0, 0.093);
+    text-align: center;
+    padding: 0.4em 0;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.065);
 }
 
 .stats {
@@ -89,15 +146,15 @@ p {
 }
 
 .padding-color {
-    background-color: red;
+    background-color: rgb(168, 38, 80);
 }
 
 .border-color {
-    background-color: rgb(0, 255, 106);
+    background-color: rgb(21, 185, 141);
 }
 
 .margin-color {
-    background-color: rgb(255, 157, 0);
+    background-color: rgb(168, 129, 80);
 }
 
 /* .slidecontainer {
@@ -109,7 +166,7 @@ p {
 }
 
 .log {
-    height:3rem;
+    height: 3rem;
     width: 12rem;
     background-color: rgba(0, 0, 0, 0.185);
     text-align: center;
@@ -117,7 +174,9 @@ p {
 }
 
 
-
+label {
+    border: 1px solid rgba(255, 255, 255, 0.065);
+}
 
 
 
@@ -130,13 +189,14 @@ p {
 
 .slidecontainer {
     width: 100%;
+    
 }
 
 .slider {
     /* Override default CSS styles */
     -webkit-appearance: none;
     appearance: none;
-    width: 16rem;
+    width: 20.5rem;
     outline: none;
     opacity: 0.7;
     /* Set transparency (for mouse-over effects on hover) */
@@ -156,6 +216,7 @@ p {
 
 .sl-padding input {
     background: rgba(255, 0, 0, 0.82);
+
 }
 
 .sl-border input {
@@ -174,21 +235,55 @@ p {
     height: 32px;
     background: #ffffff;
     cursor: pointer;
-    
+
 }
 
-.sl-padding:hover + .padding-box{
+.sl-padding:hover+.padding-box {
     background-color: rgb(0, 255, 136);
 }
 
 #padding {
-    width: 5rem;    
+    width: 5rem;
 }
 
 h1 {
+    text-align: center;
     margin-bottom: auto;
+    /* margin-top: 0.5rem; */
+    text-shadow: rgba(2, 6, 16, 0.339) 2.3px 2.63px 0px;
+    padding: 1em;
 }
 
-.flexcol {
-    margin-bottom: 4.8rem;
+#maBody {
+    padding: 1.15rem 0.3em 1.50rem 0.3em;
+    filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.297));
+}
+
+
+
+
+.checkboxes {
+    background-color: rgba(0, 0, 0, 0.093);
+    width: 22rem;
+    text-align: center;
+    justify-content: space-between;
+    /* padding-inline: 1em; */
+    margin-top: auto;
+}
+.checkboxes > div {
+    width: 22rem;
+}
+
+.checkbox {
+    width: 22rem;
+    padding-block: 0.2rem;
+}
+label {
+    display: inline-block;
+}
+
+
+.checkbox:hover {
+    background-color: rgba(255, 255, 255, 0.152);
+
 }
