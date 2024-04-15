@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Shantell Sans";
+}
+ 
+html {
+    font-size: 1.3rem;
+    font-family: sans-serif;
+
+}
+
+body {
+    color: rgb(201, 201, 201);
+    margin-top: 10px;
+    margin-bottom: 110px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../img/bg2.png");   
+
+}
+
+.container {
+    background-color: rgba(23, 56, 31, 0.94);
+    width: 95%;
+    max-width: 1050px;
+    min-width: 525px;
+    /* padding: 14px 24px 12px; */
+    padding: 14px 0px 12px;
+    margin: 8px auto;
+    border: 2px hsl(135, 42%, 20%) solid;
+}
+
+.card {
+    display: inline-flex;
+    background-color: hsla(0, 19%, 31%, 0.276);
+    padding: 3px 3px;
+    margin: 20px 4px 0px 4px;
+    text-align: center;
+    color: rgb(6, 15, 8);
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border: 2px rgba(2, 3, 2, .2) solid;   
+}
+
+.profileContainer {
+    justify-content: center;
+    padding: 0px;
+    width: 84%;
+}
+
+.ui {
+    background-color: hsl(135, 42%, 10%);
+    border: 2px hsl(135, 42%, 13%) solid;
+    background-color: rgb(10, 12, 14);
+    background-color: rgba(10, 12, 14, 0.847);    
+    border: 2px rgb(10, 12, 14) solid;
+}
+
+#header{
+    padding: 0px 0px 12px 24px;    
+}
+.topCows {
+    padding-right: 0px;
+}
+
+.inline {
+    display: inline-flex;
+}
+
+figcaption {
+    font-size: 1.1em;
+    color: rgb(205, 205, 205);
+}
+
+header p {
+    color: #b1b1b1;
+    font-size: 0.7em;
+    padding-left: 0.33em;
+    padding-top: 0.1em;
+    margin: -6px 0px 5px;
+}
+
+#joinButton {
+    background-color: hsla(31, 42%, 19%, 0.75);
+    border-color: hsla(31, 42%, 23%, 0.4);
+    ;
+}
+
+/*<<<<<<<<   L I N K S   >>>>>>>>*/
+/* visited links? */
+
+.ui a, .textL {
+    display: inline-flex;
+    color: rgb(201, 201, 201);
+    font-size: 0.84em;
+    font-style: normal;
+    background-color: hsla(69, 42%, 15%, 0.75);
+    text-decoration: none;
+    padding: 12px;
+    margin: 5px 0px 0px;
+    border: 2px hsla(69, 42%, 19%, 0.4) solid;
+}
+
+a:visited {
+    color: hsl(0, 0%, 80%);
+}
+
+a:hover {
+    color: white;
+    background-color: hsl(69, 42%, 19%);
+}
+
+.cowlink a {
+    display: inline-flex;
+    border: 3px solid rgba(2, 3, 2, .2);;
+    background-color: hsla(0, 19%, 31%, 0.276);
+}
+
+.cowlink a:hover {
+    border-color: hsla(0, 0%, 100%, 0.718);
+}
+
+#joinButton:hover{
+    background-color: hsl(31, 42%, 23%);
+}
+
+.testLogo a{
+    float: right;
+    margin-right: 24px;
+    background: none;
+    border-width: 0px;
+}
+
+/* prevent wrap logo */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
