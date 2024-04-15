@@ -1,0 +1,40 @@
+  .carousel-item {
+      transition: transform 5s linear;
+  }
+
+
+  img {
+      object-fit: contain;
+      max-height: 100vh;
+      max-width: 100vw;
+  }
+
+
+  .koptekst,
+  .voettekst {
+      height: 30vh;
+  }
+
+  .zijtekst {
+      width: 10vw;
+  }
+
+  .hoofd-wrapper {
+      width: 100vw;
+  }
+
+  .carousel-indicators {
+      position: fixed;
+      bottom: 0 !important;
+      /* background-color: red; */
+  }
+
+  .carousel-control-prev {
+      position: fixed;
+      left: 0;
+  }
+
+  .carousel-control-next {
+      position: fixed;
+      right: 0;
+  }
